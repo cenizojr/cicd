@@ -39,4 +39,8 @@ jobs:
         with:
           branch: gh-pages
           folder: docs
-          clean: true 
+          clean: true
+
+      - name : Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
